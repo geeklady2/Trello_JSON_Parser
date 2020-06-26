@@ -4,7 +4,7 @@ JSON data from trello and saves the parsed data into a csv file,
 where each row in the csv file represents a single card on the
 Trello board
 
-> Output Column Descriptions
+### Output Column Descriptions
 
 | Column Name     | Description                                       |
 ------------------|---------------------------------------------------|

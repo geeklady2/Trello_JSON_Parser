@@ -14,6 +14,7 @@ pip install pandas
 ## Usage
 ```python
 python trello-json-parser.py <inputFile.json> <outputFile.csv>
+```
 
 ## Example
 ```bash

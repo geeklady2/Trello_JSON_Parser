@@ -5,6 +5,7 @@ where each row in the csv file represents a single card on the
 Trello board
 
 > Output Column Descriptions
+
 | Column Name     | Description                                       |
 ------------------|---------------------------------------------------|
 | Title           | Name or title on the card                         |

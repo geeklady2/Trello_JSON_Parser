@@ -4,7 +4,7 @@ JSON data from trello and saves the parsed data into a csv file,
 where each row in the csv file represents a single card on the
 Trello board
 
-### Output Column Descriptions
+### Output File Column Descriptions
 
 | Column Name     | Description                                       |
 ------------------|---------------------------------------------------|
@@ -18,7 +18,8 @@ Trello board
 | Members         | Team members associated with the card             |
 | Labels          | Labels given to the card                          |
 | Check Lists     | Check lists associated with the card              |
-|-----------------|---------------------------------------------------|
+
+
 ## Installation
 ```bash
 curl -H 'Accept: application/vnd.github.v3.raw' \

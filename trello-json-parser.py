@@ -79,9 +79,9 @@ for c in data['cards']:
         pd.to_datetime(c['badges']['due']) if c['badges']['due'] != None else "", # Due Date
         0,                                                                    # Attachment Count
         "",                                                                   # Attachment Links
-        0,                                                                    # Checklist Item Total Count
-        0,                                                                    # Checklist Item Completed Count
-        0,                                                                    # Vote Count
+        c['badges']['checkItems'],                                            # Checklist Item Total Count
+        c['badges']['checkItemsChecked'],                                     # Checklist Item Completed Count
+        c['badges']['votes'],                                                 # Vote Count
         pd.to_datetime(c['dateLastActivity']) if ['dateLastActivity'] != None else "", # Last Activity Date
         c['idList'],                                                          # List ID
         lists[c['idList']],                                                   # List Name

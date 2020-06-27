@@ -14,12 +14,12 @@ Trello board
 | Card Description               | The cards detailed description                    | Yes         |
 | Labels                         | Labels given to the card                          | Yes         |
 | Members                        | Team members associated with the card             | Yes         |
-| Due Date                       | Date the task on the card is due                  | Maybe       |
+| Due Date                       | Date the task on the card is due                  | Yes         |
 | Attachment Count               | Number of attachments                             | No          |
 | Attachment Links               | URLs to the attachments                           | No          |
-| Checklist Item Total Count     | How many checklist items there are                | No          |
-| Checklist Item Completed Count | How many checklist items have been completed      | No          |
-| Vote Count                     | How many votes the card has                       | No          |
+| Checklist Item Total Count     | How many checklist items there are                | Yes         |
+| Checklist Item Completed Count | How many checklist items have been completed      | Yes         |
+| Vote Count                     | How many votes the card has                       | Yes         |
 | Latest Activity Date           | Last activity on the card                         | Yes         |
 | List Id                        | ID of the list the card is on                     | Yes         |
 | List Name                      | The name of the list or group the card belongs to | Yes         |

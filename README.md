@@ -2,9 +2,11 @@
 Trello JSON Parser is a single python file that parses exxported
 JSON data from trello and saves the parsed data into a csv file, 
 where each row in the csv file represents a single card on the
-Trello board
+Trello board.
 
 ### Output File Column Descriptions
+The output data is intended to match what is created when export to CSV is done from within
+Trello.
 
 | Column Name                    | Description                                       | Implemented |
 ---------------------------------|---------------------------------------------------|-------------|

@@ -40,12 +40,11 @@ print "Found {} cards in {} lists.".format(len(data['cards']), len(data['lists']
 print "Parsing..."
 #print(json.dumps(data, indent=4))
 
-# Grab some of the 
+# Grab some of the other data
 lists = {l['id']: l['name'] for l in data['lists']}
 users = {u['id']: u['fullName'] for u in data['members']}
 labels = {l['id']: l['name'] for l in data['labels']}
 check_lists = {c['id']: c['name'] for c in data['checklists']}
-
 
 column_names = [
     'Card Id',
@@ -77,13 +76,13 @@ for c in data['cards']:
         c['desc'],                                                            # Card Description
         ':'.join([l for k, l in labels.items() if k in c['idLabels']]),       # Labels
         ':'.join([u for k, u in users.items() if k in c['idMembers']]),       # Members
-        c['badges']['due'] != "null" if c['due'] else " ",                                # Due Date
+        pd.to_datetime(c['badges']['due']) if c['badges']['due'] != None else "", # Due Date
         0,                                                                    # Attachment Count
         "",                                                                   # Attachment Links
         0,                                                                    # Checklist Item Total Count
         0,                                                                    # Checklist Item Completed Count
         0,                                                                    # Vote Count
-        c['dateLastActivity'],                                                # Last Activity Date
+        pd.to_datetime(c['dateLastActivity']) if ['dateLastActivity'] != None else "", # Last Activity Date
         c['idList'],                                                          # List ID
         lists[c['idList']],                                                   # List Name
         data['id'],                                                           # Board ID
@@ -95,4 +94,6 @@ for c in data['cards']:
 
 df = pd.DataFrame(card_matrix,columns=column_names) 
 df.to_csv(args.output, sep=',', encoding='utf-8', index=False)
+del df
+
 

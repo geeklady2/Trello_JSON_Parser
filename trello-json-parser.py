@@ -74,11 +74,11 @@ for c in data['cards']:
         c['name'],                                                            # Card Name
         c['url'],                                                             # Card URL
         c['desc'],                                                            # Card Description
-        ','.join([l for k, l in labels.items() if k in c['idLabels']]),       # Labels
-        ','.join([u for k, u in users.items() if k in c['idMembers']]),       # Members
+        '\n'.join([l for k, l in labels.items() if k in c['idLabels']]),       # Labels
+        '\n'.join([u for k, u in users.items() if k in c['idMembers']]),       # Members
         pd.to_datetime(c['badges']['due']) if c['badges']['due'] != None else "", # Due Date
         c['badges']['attachments'],                                           # Attachment Count
-        "",                                                                   # Attachment Links
+        '\n'.join([a['url'] for a in c['attachments']]) if  c['badges']['attachments'] > 0  else "",  # Attachment Links
         c['badges']['checkItems'],                                            # Checklist Item Total Count
         c['badges']['checkItemsChecked'],                                     # Checklist Item Completed Count
         c['badges']['votes'],                                                 # Vote Count
@@ -93,7 +93,7 @@ for c in data['cards']:
 #print(card_matrix)
 
 df = pd.DataFrame(card_matrix,columns=column_names) 
-df.to_csv(args.output, sep='\t', encoding='utf-8', index=False)
+df.to_csv(args.output, sep=',', encoding='utf-8', index=False)
 del df
 
 

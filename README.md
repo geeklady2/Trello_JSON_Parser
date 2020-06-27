@@ -15,7 +15,7 @@ Trello board
 | Labels                         | Labels given to the card                          | Yes         |
 | Members                        | Team members associated with the card             | Yes         |
 | Due Date                       | Date the task on the card is due                  | Yes         |
-| Attachment Count               | Number of attachments                             | No          |
+| Attachment Count               | Number of attachments                             | Yes         |
 | Attachment Links               | URLs to the attachments                           | No          |
 | Checklist Item Total Count     | How many checklist items there are                | Yes         |
 | Checklist Item Completed Count | How many checklist items have been completed      | Yes         |

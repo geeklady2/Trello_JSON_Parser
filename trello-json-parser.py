@@ -67,7 +67,6 @@ column_names = [
     'Board Name',
     'Archived'
 ]
-print('LEN OF COLUMN ', len(column_names))
 
 card_matrix = []
 for c in data['cards']:
@@ -78,20 +77,19 @@ for c in data['cards']:
         c['desc'],                                                            # Card Description
         ':'.join([l for k, l in labels.items() if k in c['idLabels']]),       # Labels
         ':'.join([u for k, u in users.items() if k in c['idMembers']]),       # Members
-        c['due'] != None if c['due'] else " ",                                # Due Date
+        c['badges']['due'] != "null" if c['due'] else " ",                                # Due Date
         0,                                                                    # Attachment Count
         "",                                                                   # Attachment Links
         0,                                                                    # Checklist Item Total Count
         0,                                                                    # Checklist Item Completed Count
-        0,                                                                    # 
-        c['dateLastActivity'],
-        c['idList'],
-        lists[c['idList']],
-        data['id'],
-        data['name'],
-        c['closed'],        
+        0,                                                                    # Vote Count
+        c['dateLastActivity'],                                                # Last Activity Date
+        c['idList'],                                                          # List ID
+        lists[c['idList']],                                                   # List Name
+        data['id'],                                                           # Board ID
+        data['name'],                                                         # Bard Name
+        c['closed'],                                                          # Archived
     ]
-    print("LEN ROW ", len(card))
     card_matrix.append(card)
 #print(card_matrix)
 

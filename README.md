@@ -6,18 +6,26 @@ Trello board
 
 ### Output File Column Descriptions
 
-| Column Name     | Description                                       |
-------------------|---------------------------------------------------|
-| Title           | Name or title on the card                         |
-| Latest Activity | Last activity on the card                         |
-| Board Name      | Which board the card belongs to                   |
-| Board URL       | URL to the board the card belongs to              |
-| Closed          | Whether or not the card is closed                 |
-| List Name       | The name of the list or group the card belongs to |
-| Description     | The cards detailed description                    |
-| Members         | Team members associated with the card             |
-| Labels          | Labels given to the card                          |
-| Check Lists     | Check lists associated with the card              |
+| Column Name                    | Description                                       | Implemented |
+---------------------------------|---------------------------------------------------|-------------|
+| Card ID                        | Unique ID for the Card                            | Yes         |
+| Card Name                      | Name or title on the card                         | Yes         |
+| Card URL                       | URL to the card                                   | Yes         |
+| Card Description               | The cards detailed description                    | Yes         |
+| Labels                         | Labels given to the card                          | Yes         |
+| Members                        | Team members associated with the card             | Yes         |
+| Due Date                       | Date the task on the card is due                  | Maybe       |
+| Attachment Count               | Number of attachments                             | No          |
+| Attachment Links               | URLs to the attachments                           | No          |
+| Checklist Item Total Count     | How many checklist items there are                | No          |
+| Checklist Item Completed Count | How many checklist items have been completed      | No          |
+| Vote Count                     | How many votes the card has                       | No          |
+| Latest Activity Date           | Last activity on the card                         | Yes         |
+| List Id                        | ID of the list the card is on                     | Yes         |
+| List Name                      | The name of the list or group the card belongs to | Yes         |
+| Board ID                       | ID of the bard the card is on                     | Yes         |
+| Board Name                     | Which board the card belongs to                   | Yes         |
+| Archived                       | Whether or not the card is closed                 | Yes         |
 
 
 ## Installation
